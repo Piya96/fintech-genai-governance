@@ -21,7 +21,7 @@ should not promise guaranteed returns, and should escalate high-stakes
 actions to a human. arXiv 2605.14744's core argument (Section 03 of the
 field guide) is that a policy enforced only through the model's own
 instruction-following is a policy that degrades under paraphrase,
-adversarial pressure, and plain bad luck -- and that the fix isn't a
+adversarial pressure, and plain bad luck and that the fix isn't a
 better prompt, it's moving enforcement to code that runs on the model's
 *output*, outside its interpretive loop entirely, where a check either
 fires or it doesn't. This repo builds that second thing: four small,
@@ -103,7 +103,7 @@ catches it, rather than just asserting the construction works.
 **`ComplianceExplainer` uses hand-rolled TF-IDF, not an embedding model,
 on purpose.** The field guide's Section 05 argument (arXiv 2506.01093) is
 that regulatory grounding is a retrieval problem over a small, curated,
-versioned corpus the institution controls -- not a generation problem
+versioned corpus the institution controls not a generation problem
 where an LLM might produce a fluent, wrong citation from its training
 data. Given that framing, classic TF-IDF cosine similarity is the right
 tool, not a limitation: it's deterministic, needs no model weights, and
@@ -111,7 +111,7 @@ its ranking is trivially explainable (which exact words in the query
 matched which exact words in the retrieved document). Every entry in
 `data/regulatory_corpus.json` is a paraphrased summary with an explicit
 "not legal text" caveat in its `source` field, because retrieval quality
-is being demonstrated here, not legal accuracy -- a real deployment would
+is being demonstrated here, not legal accuracy a real deployment would
 point this same retrieval mechanism at an institution's actual,
 counsel-reviewed compliance corpus.
 
@@ -124,20 +124,20 @@ trust felt like it worked against the point.
 
 ## Verification
 
-No .NET SDK in the sandbox this was built in -- same honest position as
+No .NET SDK in the sandbox this was built in same honest position as
 every other repo in this portfolio. All four C# components (`GovernanceGate`,
 `AgenticRiskScorer`, `AuditTrailStore`, `ComplianceExplainer`) are written
 and reviewed carefully, and covered by the xUnit tests under
 `tests/GenAiGovernance.Tests/`, but none of it compiled or ran as C# here.
 
 What's different about this repo, compared to the rest of the portfolio,
-is how much of the actual *logic* -- not just plausible-looking
+is how much of the actual *logic* not just plausible-looking
 scaffolding -- could still be verified by porting it to Python and
 running it for real, because none of these four components depend on
 ASP.NET Core, EF Core, or anything else that needs the .NET runtime to
 execute. All four scripts below were actually run in this sandbox:
 
-**`verification/risk_scorer_oracle.py`** -- exhaustively checks all 3^4 =
+**`verification/risk_scorer_oracle.py`** exhaustively checks all 3^4 =
 81 possible `RiskFactors` combinations against a Python mirror of
 `AgenticRiskScorer.Score`'s formula, confirming the threshold is
 inclusive at exactly 2.5 (10 boundary combinations, all correctly
@@ -145,7 +145,7 @@ inclusive at exactly 2.5 (10 boundary combinations, all correctly
 single factor never lowers the result). Caveat stated in the script
 itself: without a .NET SDK there's no live cross-check against a running
 C# process the way `verification/test_sqlite_batch_verify.py` compared
-against real SQL Server output in the Matching Engine repo -- this
+against real SQL Server output in the Matching Engine repo this
 verifies the specification exhaustively, reviewed line-by-line for parity
 with the C# source.
 
