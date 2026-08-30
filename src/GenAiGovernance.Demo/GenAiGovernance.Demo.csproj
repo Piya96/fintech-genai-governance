@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>GenAiGovernance.Demo</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GenAiGovernance.Domain\GenAiGovernance.Domain.csproj" />
+    <ProjectReference Include="..\GenAiGovernance.Core\GenAiGovernance.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Copies the corpus next to the built binary so the relative path
+         in Program.cs resolves the same way whether run via `dotnet run`
+         from the repo root or as a published binary. -->
+    <None Include="..\..\data\regulatory_corpus.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+</Project>

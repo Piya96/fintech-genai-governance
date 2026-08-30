@@ -1,0 +1,62 @@
+[
+  {
+    "id": "EU-AIA-HR-01",
+    "title": "EU AI Act -- high-risk classification for credit scoring",
+    "source": "EU AI Act, Annex III (paraphrased summary, not legal text)",
+    "text": "AI systems used to evaluate the creditworthiness of natural persons or establish their credit score are classified as high-risk under the EU AI Act. High-risk systems must undergo conformity assessment, maintain technical documentation, log events automatically to enable traceability, and remain subject to human oversight throughout their lifecycle."
+  },
+  {
+    "id": "EU-AIA-HR-02",
+    "title": "EU AI Act -- record-keeping and logging obligations",
+    "source": "EU AI Act, Article 12 (paraphrased summary, not legal text)",
+    "text": "High-risk AI systems must automatically record events (logs) over their lifetime to a level that ensures a level of traceability appropriate to the system's intended purpose, including logs relevant to identifying situations that may result in the system presenting a risk or in a substantial modification."
+  },
+  {
+    "id": "NIST-RMF-01",
+    "title": "NIST AI Risk Management Framework -- core functions",
+    "source": "NIST AI RMF 1.0 (paraphrased summary, not the standard itself)",
+    "text": "The NIST AI Risk Management Framework organizes AI risk management into four functions: Govern (cultivate a risk-aware culture and accountability structures), Map (establish context and identify risks), Measure (analyze and track identified risks with appropriate metrics), and Manage (allocate resources to treat mapped and measured risks, including response and recovery)."
+  },
+  {
+    "id": "NIST-RMF-02",
+    "title": "NIST AI Risk Management Framework -- human oversight",
+    "source": "NIST AI RMF 1.0 (paraphrased summary, not the standard itself)",
+    "text": "The Manage function calls for human oversight mechanisms proportional to the risk level of the AI system, including the ability to override, disengage, or deactivate AI systems that demonstrate unintended or harmful behavior, particularly for higher-risk use cases such as credit, lending, and other consequential financial decisions."
+  },
+  {
+    "id": "SEC-AI-COI-01",
+    "title": "US SEC -- proposed AI conflict-of-interest rule",
+    "source": "SEC proposed rule on predictive data analytics conflicts (paraphrased summary, not the rule text)",
+    "text": "The SEC's proposed rule would require broker-dealers and investment advisers to evaluate whether their use of predictive data analytics and AI in investor interactions places the firm's interests ahead of the investor's interests, and to eliminate or neutralize any such conflict before the technology is used, including conflicts arising from language that could be construed as guaranteeing returns."
+  },
+  {
+    "id": "FAIR-LENDING-01",
+    "title": "Fair lending -- protected characteristics in credit decisions",
+    "source": "Equal Credit Opportunity Act (ECOA), paraphrased summary, not legal text",
+    "text": "Creditors may not discriminate against an applicant on the basis of race, color, religion, national origin, sex, marital status, or age in any aspect of a credit transaction, including automated decisioning and AI-assisted underwriting systems, and must be able to provide specific reasons for adverse action."
+  },
+  {
+    "id": "MAS-MINDFORGE-01",
+    "title": "Singapore MAS -- Project MindForge, generative AI risk taxonomy",
+    "source": "MAS Project MindForge (paraphrased summary, not the publication itself)",
+    "text": "Project MindForge, led by Singapore's Monetary Authority, sets out a risk taxonomy for generative AI in financial services covering model risk, data risk, and ethical risk, and recommends institutions maintain human-in-the-loop checkpoints for generative AI outputs that inform customer-facing financial advice or decisions."
+  },
+  {
+    "id": "INDIA-FREEAI-01",
+    "title": "India -- FREE-AI framework for financial-sector AI governance",
+    "source": "RBI FREE-AI framework (paraphrased summary, not the publication itself)",
+    "text": "India's FREE-AI framework (Framework for Responsible and Ethical Enablement of AI) for the financial sector recommends a sandbox-first approach to deploying generative AI, board-level accountability for AI risk, and mandatory disclosure to customers when they are interacting with an AI system rather than a human representative."
+  },
+  {
+    "id": "GDPR-AUTOMATED-01",
+    "title": "GDPR -- automated decision-making and profiling",
+    "source": "GDPR Article 22 (paraphrased summary, not legal text)",
+    "text": "Data subjects have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning them or similarly significantly affects them, such as automatic refusal of an online credit application, unless specific safeguards including human intervention are in place."
+  },
+  {
+    "id": "DISCLOSURE-01",
+    "title": "Disclosure of AI interaction to customers",
+    "source": "Composite of multiple regulatory instruments surveyed (see field guide Section 01), paraphrased",
+    "text": "Multiple jurisdictions surveyed in current generative AI governance guidance recommend or require that customers be clearly informed when they are interacting with an AI system, particularly in contexts involving financial advice, credit decisions, or account servicing, so that the customer can request escalation to a human representative."
+  }
+]
