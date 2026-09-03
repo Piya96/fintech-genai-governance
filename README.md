@@ -10,7 +10,7 @@ tamper-evident, hash-chained audit trail; and a retrieve-then-explain
 compliance assistant grounded in a small regulatory corpus instead of an
 LLM's own (unverifiable) recollection of what a regulation says (arXiv
 2506.01093). Built as the practical half of "CCA-P applied to fintech" --
-Anthropic's Claude Certified Agent Practitioner material framed against a
+Anthropic's Claude Certified Architect – Professional material framed against a
 regulated industry's actual constraints.
 
 ## Problem
